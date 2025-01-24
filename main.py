@@ -51,29 +51,3 @@ Physics Simulation
   Storage: SSD with at least 1 TB capacity
   Additional: Consider specialized hardware for specific simulation needs (e.g., tensor cores)
 '''
-
-
-def insertion_sort(arr):
-    """
-    Sorts an array in ascending order using the insertion sort algorithm.
-    Args:
-        arr: The array to be sorted.
-    Returns:
-        None. The array is modified in-place.
-    """
-    for j in range(1, len(arr)):
-        key = arr[j]  # Element to be inserted
-
-        # Move elements of arr[0..i-1], that are greater than key,
-        # to one position ahead of their current position
-        i = j - 1
-        while i >= 0 and arr[i] > key:
-            arr[i + 1] = arr[i]
-            i = i - 1
-
-        arr[i + 1] = key  # Insert the key into its correct position
-
-# Example usage
-my_array = [5, 2, 9, 1, 5, 6]
-insertion_sort(my_array)
-print(my_array)  # Output: [1, 2, 5, 5, 6, 9]
